@@ -6,13 +6,18 @@
     xmlns:local="clr-namespace:HTTP_Client.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="HTTP_Client">
-
+    <TabBar>
     <ShellContent
-        Title="Home"
+        Title="Listar postagens"
         ContentTemplate="{DataTemplate local:PostView}"
-        Route="MainPage" />
-        
-    
-    
+        Route="PostView" />
+
+        <ShellContent
+        Title="Criar postagens"
+        ContentTemplate="{DataTemplate local:CreatePostView}"
+        Route="CreatePostView" />
+
+
+    </TabBar>
     
 </Shell>

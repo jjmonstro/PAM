@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HTTP_Client.Views.CreatePostView"
+             Title="CreatePostView">
+    <VerticalStackLayout>
+        <Label 
+            Text="Título da postagem"/>
+        <Entry  
+            Placeholder="Título"/>
+        <Label
+            Text="Conteúdo da postagem"/>
+        <Editor
+            HeightRequest="150"
+            Placeholder="Coprpo do texto"/>
+
+    </VerticalStackLayout>
+</ContentPage>
