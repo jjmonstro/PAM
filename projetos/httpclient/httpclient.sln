@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "httpclient", "httpclient\httpclient.csproj", "{4AF9407A-2922-4A80-8450-0DC4720A9AB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF9407A-2922-4A80-8450-0DC4720A9AB7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {035BA2CD-A112-4689-B561-0ED4F152BB4D}
+	EndGlobalSection
+EndGlobal

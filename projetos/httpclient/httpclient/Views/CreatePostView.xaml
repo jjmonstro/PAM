@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="httpclient.Views.CreatePostView"
+             Title="CreatePostView">
+    <VerticalStackLayout>
+        <Label 
+            Text="Título da Postagem"/>
+        <Entry 
+            Text = "{Binding Title}"
+            Placeholder="Titulo"/>
+        <Label
+            Text="Conteudo da postagem"/>
+        <Editor
+            Text = "{Binding Body}"
+            HeightRequest="150"
+            Placeholder="corpo do texto"/>
+        <Button
+            Text = "Postar"
+            x:Name="PostButton"
+            Command = "{Binding SavePostCommand}"
+            />
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
