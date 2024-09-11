@@ -18,12 +18,12 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.get("/Carros", async (req, res) => {
+app.get("/Personagem", async (req, res) => {
     let connection;
     try {
       connection = await db.connect();
       const request = db.request();
-      const results = await request.query("SELECT * FROM carro;");
+      const results = await request.query("SELECT * FROM Personagem;");
       res.status(200).json(results);
     } catch (err) {
       res.status(500).json({ err });
@@ -33,19 +33,19 @@ app.get("/Carros", async (req, res) => {
   });
   
  
-  app.post("/Carros", async (req, res) => {
+  app.post("/Personagem", async (req, res) => {
     let connection;
     try{
       connection = await db.connect();
       const request = db.request();
       console.log(req.body);
-      const results = await request.query(`INSERT INTO carro 
+      const results = await request.query(`INSERT INTO Personagem 
        VALUES ( 
-      ${req.body.cor_id}, '${req.body.nome}', '${req.body.marca}',
-      ${req.body.ano}, ${req.body.quantidade_de_portas});`);
+      ${req.body.personagem_ID}, '${req.body.nome}', '${req.body.vidaMax}',
+      ${req.body.vidaAtual}, ${req.body.forca}), '${req.body.agilidade}', '${req.body.mana}';`);
       
       res.status(201).json(results);
-      console.log("Carro criado!");
+      console.log("Personagem");
     } catch (err) {
       res.status(500).json({ err });
     } finally {
