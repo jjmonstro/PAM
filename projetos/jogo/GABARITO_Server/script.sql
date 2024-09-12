@@ -42,6 +42,7 @@ CREATE TABLE Pocao (
 
 CREATE TABLE Monstro (
     monstro_ID INT PRIMARY KEY,
+    nome VARCHAR,
     vidaMax INT,
     vidaAtual INT,
     forca INT,
