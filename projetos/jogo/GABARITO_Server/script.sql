@@ -17,11 +17,7 @@ CREATE TABLE Arma (
 
 CREATE TABLE Monstro (
     monstro_ID INT PRIMARY KEY,
-<<<<<<< HEAD
     nome VARCHAR (50),
-=======
-    nome VARCHAR,
->>>>>>> 1811b79bc6819dc1fb44e958ae2a132c707e01d1
     vidaMax INT,
     vidaAtual INT,
     forca INT,
