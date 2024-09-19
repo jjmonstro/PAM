@@ -7,14 +7,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "500kb" }));
 
 app.get("/", async (req, res) => {
-  let connection;
+  let connection = (await db).connect;
   try {
     const connection = await db;
     connection.query();
   } catch (err) {
     throw new Error(err);
   } finally {
-    connection.close();
+   // connection.close();
   }
 });
 
@@ -23,13 +23,14 @@ app.get("/Personagem", async (req, res) => {
     let connection;
     try {
       connection = await db.connect();
-      const request = db.request();
+      const request = await db.request();
       const results = await request.query("SELECT * FROM Personagem;");
       res.status(200).json(results);
     } catch (err) {
-      res.status(500).json({ err });
+      console.log(err.message)
+      res.status(500).json( err );
     } finally {
-      connection.close();
+     // connection.close();
     }
   });
   

@@ -94,9 +94,11 @@ INSERT INTO Arma (arma_ID,nome,dano,descricao) VALUES (3, 'Espada de Ouro', 1.12
 INSERT INTO Arma (arma_ID,nome,dano,descricao) VALUES (4, 'Espada de Rubi', 1.2, 'Uma espada forjada inteiramente do rubi mais brilhante    ')
 INSERT INTO Arma (arma_ID,nome,dano,descricao) VALUES (5, 'Tridente de Netuno', 5, 'O tridente de Netuno, majestoso e imponente, brilha com uma aura celestial. Forjado nos abismos do oceano, suas três pontas cortam as ondas e dominam o reino das profundezas, refletindo o poder supremo do deus dos mares.')
 INSERT INTO Arma (arma_ID,nome,dano,descricao) VALUES (6, 'Trovão de Júpiter', 99, 'O raio de Júpiter, forjado no coração dos céus, relampeja com uma fúria celestial. Este dardo de pura energia divina, envolto em chamas e eletricidade, descerra os céus e domina os trovões com um estrondo primordial. Seu brilho é o selo do poder supremo e a marca da soberania do rei dos deuses.')
+INSERT INTO Arma (arma_ID,nome,dano,descricao) Values (0, Null,Null,Null)
 
 --esses inserts de monstro serão decididos pelo caderno da marina
 INSERT INTO Monstro (monstro_ID,nome,vidaMax,vidaAtual,forca,agilidade) VALUES (1, 'Correx', 100, 100, 100, 100)
+INSERT INTO Monstro (monstro_ID,nome,vidaMax,vidaAtual,forca,agilidade) VALUES (0,Null,Null,Null,Null,Null)
 
 INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (1, 'Poção de vida pequena', 10, 0)
 INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (2, 'Poção de vida média', 30, 0)
@@ -106,6 +108,7 @@ INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (5, 'Poção de 
 INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (6, 'Poção de nivel grande', 0, 8)
 INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (7, 'Poção mista', 30, 3)
 INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (8, 'Lágrima de Plutão', 999, 999)
+INSERT INTO Pocao (pocao_ID,nome,ganho_vida,ganho_nivel) VALUES (0, Null, Null, Null)
 
 INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (1, 1, 0)
 INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (2, 2, 0)
@@ -121,6 +124,7 @@ INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (12, 0, 3)
 INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (13, 0, 4)
 INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (14, 0, 5)
 INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (15, 0, 6)
+INSERT INTO Bau (bau_id,pocao_ID,arma_ID) VALUES (0, null, null)
 
 
 INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (1, 0, 1)
@@ -140,4 +144,3 @@ INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (13, 0, 14)
 INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (15, 0, 15)
 --aqui comçam as salas de monstro (os monstros ainda não foram criados)
 INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (16, 1, 0)
-
