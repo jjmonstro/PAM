@@ -2,8 +2,8 @@ import mssql from 'mssql';
 
 const sqlServerConfig = {
   user: 'sa',
-  password: '*123456HAS*',
-  database: 'Jogo',
+  password: '123456',
+  database: 'PCII_DB',
   server: 'localhost',
   pool: {
     max: 10,
