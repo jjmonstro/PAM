@@ -1,21 +1,14 @@
-CREATE DATABASE PCII_DB;
-USE PCII_DB;
+CREATE DATABASE Jogo;
+USE Jogo;
 
-<<<<<<< HEAD
-CREATE TABLE cor(
-    id INT IDENTITY(1, 1),
-    nome VARCHAR(100) NOT NULL UNIQUE,
-    hexadecimal CHAR(7),
-    PRIMARY KEY(id)
-=======
 CREATE TABLE Arma (
     arma_ID INT PRIMARY KEY,
     nome VARCHAR (50),
     dano DECIMAL,  
     descricao VARCHAR (350),
+    possui BIT
 );
  
- alter table Arma add possui bit
 
 /*
     eu (correia) coloquei o dano como decimal para que
@@ -32,41 +25,16 @@ CREATE TABLE Monstro (
     vidaAtual INT,
     forca INT,
     agilidade INT
->>>>>>> df518498bd1ffd83fda4ad36b3b0854cfad7657e
 );
 
-CREATE TABLE carro(
-    id INT IDENTITY(1,1),
-    cor_id INT NOT NULL,
-    nome VARCHAR(255) NOT NULL,
-    marca VARCHAR(255) NOT NULL,
-    ano INT NOT NULL,
-    quantidade_de_portas INT NOT NULL,
-
-    PRIMARY KEY(id),
-    CONSTRAINT FK_Carro_Cor
-    FOREIGN KEY (cor_id) REFERENCES cor(id)
+CREATE TABLE Pocao (
+    pocao_ID INT PRIMARY KEY,
+    nome VARCHAR (50),
+    ganho_vida INT,
+    ganho_nivel INT,
+    possui BIT
 );
 
-<<<<<<< HEAD
-INSERT INTO cor (nome, hexadecimal) VALUES 
-('Preto', '#000000'),
-('Branco', '#FFFFFF'),
-('Cinza', '#808080'),
-('Vermelho', '#FF0000'),
-('Azul', '#0000FF'),
-('Verde', '#008000'),
-('Amarelo', '#FFFF00'),
-('Rosa', '#FFC0CB'),
-('Laranja', '#FFA500'),
-('Roxo', '#800080'),
-('Marrom', '#A52A2A'),
-('Turquesa', '#40E0D0'),
-('Ciano', '#00FFFF'),
-('Magenta', '#FF00FF'),
-('Ouro', '#FFD700'),
-('Prata', '#C0C0C0');
-=======
 CREATE TABLE Bau (
     bau_id INT PRIMARY KEY,
     pocao_ID INT FOREIGN KEY
@@ -181,4 +149,3 @@ INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (14, 0, 14)
 INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (15, 0, 15)
 --aqui comçam as salas de monstro (os monstros ainda não foram criados)
 INSERT INTO Sala (sala_ID,monstro_ID,bau_id) VALUES (16, 1, 0)
->>>>>>> df518498bd1ffd83fda4ad36b3b0854cfad7657e
