@@ -21,7 +21,13 @@ app.get("/", async (req, res) => {
 app.get("/Carros", async (req, res) => {
     let connection;
     try {
-      connection = await db.connect();
+      try {
+        connection = await db.connect();
+      } catch (error) {
+        console.error(db);
+        console.error('Error bb', error);
+      }
+      
       const request = db.request();
       const results = await request.query("SELECT * FROM carro;");
       res.status(200).json(results);
